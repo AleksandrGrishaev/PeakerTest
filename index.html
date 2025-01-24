@@ -5,8 +5,12 @@
 </head>
 <body>
     <script>
-        window.Telegram.WebApp.expand();
-        window.location.href = "http://localhost:5173"; // Ваш dev-сервер
+        if (window.Telegram && window.Telegram.WebApp) {
+            window.Telegram.WebApp.expand();
+            window.location.href = "http://localhost:5173";
+        } else {
+            console.error('Telegram WebApp not found');
+        }
     </script>
 </body>
 </html>
