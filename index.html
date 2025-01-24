@@ -7,9 +7,11 @@
     <script>
         if (window.Telegram && window.Telegram.WebApp) {
             window.Telegram.WebApp.expand();
-            window.location.href = "http://localhost:5173";
+            // Добавляем параметр platform=telegram
+            window.location.href = "http://localhost:5173?platform=telegram";
         } else {
             console.error('Telegram WebApp not found');
+            window.location.href = "http://localhost:5173?platform=web";
         }
     </script>
 </body>
