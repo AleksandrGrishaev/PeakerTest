@@ -6,17 +6,7 @@
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
 </head>
 <body>
-    <script>
-        if (window.Telegram && window.Telegram.WebApp) {
-            const webapp = window.Telegram.WebApp;
-            webapp.expand();
-            
-            // Перенаправляем на основное приложение
-            window.location.href = "http://localhost:5173";
-        } else {
-            console.error('Telegram WebApp not found');
-            window.location.href = "http://localhost:5173";
-        }
-    </script>
+    <div id="app"></div>
+    <script type="module" src="./main.ts"></script>
 </body>
 </html>
